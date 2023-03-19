@@ -11,8 +11,8 @@ interface Product {
 }
 
 type ProductProps = {
-  product?: Product | undefined;
-  // product?: any;
+  // product?: Product | undefined;
+  product?: any;
 };
 
 const Product = ({ product: { image, name, slug, price } }: ProductProps) => {

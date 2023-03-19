@@ -17,8 +17,8 @@ interface FooterBanner {
 }
 
 type FooterBannerProps = {
-  footerBanner?: FooterBanner | undefined;
-  // footerBanner?: any;
+  // footerBanner?: FooterBanner | undefined;
+  footerBanner?: any;
 };
 
 const FooterBanner = ({
