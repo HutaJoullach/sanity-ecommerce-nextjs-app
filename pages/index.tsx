@@ -4,22 +4,24 @@ import { client } from "../lib/client";
 import { HeroBanner } from "../components";
 
 type HomeProps = {
-  products?: Array<any>;
-  bannerData?: Array<any>;
+  products?: Array<any> | undefined;
+  bannerData?: Array<any> | undefined;
 };
 
 const Home = ({ products, bannerData }: HomeProps) => {
   return (
     <>
-      {/* <HeroBanner heroBanner={bannerData.length && bannerData[0]} /> */}
+      {/* {console.log(products)} */}
+
+      <HeroBanner heroBanner={bannerData?.length && bannerData[0]} />
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {products?.map((product) => (
+        {/* {products?.map((product) => (
           <Product key={product._id} product={product} />
-        ))}
+        ))} */}
       </div>
       {/* FooterBanner */}
     </>
