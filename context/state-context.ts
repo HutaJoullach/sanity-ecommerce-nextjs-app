@@ -2,20 +2,20 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 interface ProductContextType {
-  showCart: any;
+  showCart: boolean;
   setShowCart: any;
-  cartItems: any;
-  totalPrice: string;
-  totalQuantities: string;
-  qty: string;
-  incQty: string;
-  decQty: string;
-  onAdd: string;
-  toggleCartItemQuanitity: string;
-  onRemove: any;
+  cartItems: Array<any>;
+  totalPrice: number;
+  totalQuantities: number;
+  qty: number;
+  incQty: () => void;
+  decQty: () => number;
+  onAdd: any;
+  toggleCartItemQuanitity: () => void;
+  onRemove: () => void;
   setCartItems: any;
-  setTotalPrice: string;
-  setTotalQuantities: string;
+  setTotalPrice: any;
+  setTotalQuantities: any;
 }
 
 const Context = createContext<ProductContextType | null>(null);
