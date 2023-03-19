@@ -16,7 +16,7 @@ export default async function handler(req, res) {
           const newImage = img
             .replace(
               "image-",
-              "https://cdn.sanity.io/images/vfxfwnaw/production/"
+              "https://cdn.sanity.io/images/3rfjg9sf/production/"
             )
             .replace("-webp", ".webp");
 
@@ -40,7 +40,6 @@ export default async function handler(req, res) {
         cancel_url: `${req.headers.origin}/canceled`,
       };
 
-      // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create(params);
 
       res.status(200).json(session);
