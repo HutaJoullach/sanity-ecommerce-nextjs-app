@@ -1,7 +1,7 @@
 import styles from "@/styles/Home.module.css";
 
 import { client } from "../lib/client";
-import { HeroBanner } from "../components";
+import { Product, HeroBanner } from "../components";
 
 type HomeProps = {
   products?: Array<any> | undefined;
@@ -19,9 +19,9 @@ const Home = ({ products, bannerData }: HomeProps) => {
         <p>Speakers of many variations</p>
       </div>
       <div className="products-container">
-        {/* {products?.map((product) => (
+        {products?.map((product) => (
           <Product key={product._id} product={product} />
-        ))} */}
+        ))}
       </div>
       {/* FooterBanner */}
     </>
